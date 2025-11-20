@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const QuickNotesApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class QuickNotesApp extends StatelessWidget {
+  const QuickNotesApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Quick Notes',
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.deepPurple),
+      home: const HomeScreen(),
     );
   }
 }
